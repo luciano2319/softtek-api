@@ -13,13 +13,18 @@ export class PersonService {
   ) {}
 
   async create(createPersonDto: CreatePersonDto) {
-    const person = await this.prismaService.person.create({
-      data: createPersonDto,
-      include: {
-        Planet: true,
-      }
-    });
-    return translatePerson(person);
+    try {
+      const person = await this.prismaService.person.create({
+        data: createPersonDto,
+        include: {
+          Planet: true,
+        }
+      });
+      return translatePerson(person);
+    } catch (error) {
+      if (error.code === 'P2003') throw new BadRequestException('El planeta no existe');
+      throw new InternalServerErrorException('Contacte a soporte');
+    }
   }
 
   async findAll(paginationDto: PaginationDto) {
@@ -29,6 +34,9 @@ export class PersonService {
     const lastPage = Math.ceil(totalRecords / take);
 
     const people = await this.prismaService.person.findMany({
+      include: {
+        Planet: true,
+      },
       take,
       skip: (page - 1) * take,
     });
@@ -67,7 +75,7 @@ export class PersonService {
       return translatePerson(updatedPerson);
     } catch (error) {
       if (error.code === 'P2003') throw new BadRequestException('El planeta no existe');
-      throw new InternalServerErrorException();
+      throw new InternalServerErrorException('Contacte a soporte');
     }
 
   }

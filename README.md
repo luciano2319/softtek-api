@@ -28,6 +28,6 @@ http://localhost:3000/api/seed
 ```
 
 > [!IMPORTANT]
-> La semilla cargará 10 planetas cuyo código empieza en 1 y termina en 10, lo cuál nos servirá para la inserción de personas
+> La semilla eliminará todos los registros de personajes y cargará 10 planetas cuyo códigos empiezan en 1 y termina en 10, lo cuál nos servirá para la inserción de personas
 
 # Ejecutar en producción

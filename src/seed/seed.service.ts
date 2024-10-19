@@ -14,6 +14,7 @@ export class SeedService {
 
   async create() {
 
+    await this.prismaService.person.deleteMany();
     await this.prismaService.planet.deleteMany();
 
     const planetsData = await this.http.get<PlanetResponse>(`${envs.apiUrl}/planets`);
