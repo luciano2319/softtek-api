@@ -37,6 +37,11 @@ npm run start:dev
 http://localhost:3000/api/seed
 ```
 
+10. Ejecutar las pruebas unitarias con el comando:
+```
+npm run test:watch
+```
+
 > [!IMPORTANT]
 > La semilla eliminará todos los registros de personajes y cargará 10 planetas cuyo códigos empiezan en 1 y termina en 10, lo cuál nos servirá para la inserción de personas
 
