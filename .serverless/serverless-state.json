@@ -1,0 +1,95 @@
+{
+  "service": {
+    "service": "starwars-api",
+    "serviceObject": {
+      "name": "starwars-api"
+    },
+    "provider": {
+      "name": "aws",
+      "runtime": "nodejs18.x",
+      "environment": {
+        "SWAPI_URL": "https://swapi.py4e.com/api",
+        "DATABASE_URL": "mysql://admin:zNvem55R6rGVHLZ@evaluacion-softtek.c9qmai44axdb.us-east-1.rds.amazonaws.com:3306/starwars?schema=public"
+      },
+      "apiGateway": {
+        "name": "starwars-api-gateway",
+        "version": "v2",
+        "cors": {
+          "origins": [
+            "*"
+          ],
+          "methods": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE",
+            "HEAD"
+          ],
+          "headers": [
+            "Content-Type",
+            "Authorization"
+          ],
+          "allowCredentials": false
+        }
+      },
+      "functions": {
+        "main": {
+          "handler": "dist/serverless.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/",
+                "method": "ANY"
+              }
+            },
+            {
+              "http": {
+                "path": "{proxy+}",
+                "method": "ANY"
+              }
+            }
+          ]
+        }
+      },
+      "plugins": [
+        "serverless-jetpack",
+        "serverless-offline"
+      ],
+      "stage": "dev",
+      "region": "us-east-1",
+      "versionFunctions": true,
+      "compiledCloudFormationTemplate": {
+        "AWSTemplateFormatVersion": "2010-09-09",
+        "Description": "The AWS CloudFormation template for this Serverless application",
+        "Resources": {},
+        "Outputs": {
+          "ServerlessDeploymentBucketName": {
+            "Value": "serverless-framework-deployments-us-east-1-4b88c842-fa16",
+            "Export": {
+              "Name": "sls-starwars-api-dev-ServerlessDeploymentBucketName"
+            }
+          }
+        }
+      }
+    },
+    "pluginsData": {},
+    "functions": {},
+    "configValidationMode": "warn",
+    "serviceFilename": "serverless.yml",
+    "initialServerlessConfig": {
+      "service": "starwars-api",
+      "useDotenv": true,
+      "frameworkVersion": "4",
+      "provider": {
+        "$ref": "$[\"service\"][\"provider\"]"
+      }
+    },
+    "appId": null,
+    "orgId": null,
+    "layers": {}
+  },
+  "package": {
+    "artifactDirectoryName": "serverless/starwars-api/dev/1729380341304-2024-10-19T23:25:41.304Z",
+    "artifact": ""
+  }
+}

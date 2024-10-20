@@ -17,12 +17,22 @@ npm i -g @nestjs/cli
 
 5. Llenar las variables de entorno definidas en el __.env__
 
-6. Ejecutar la aplicación en dev:
+6. Actualizar los modelos de prisma
+```
+npx prisma migrate dev --name initial
+```
+
+7. Actualizar prisma cli
+```
+npx prisma generate
+```
+
+8. Ejecutar la aplicación en dev:
 ```
 npm run start:dev
 ```
 
-7. Ejecutar la semilla para construir los planetas, será importante para crear personas
+9. Ejecutar la semilla para construir los planetas, será importante para crear personas
 ```
 http://localhost:3000/api/seed
 ```

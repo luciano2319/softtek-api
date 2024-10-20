@@ -1,0 +1,46 @@
+service: starwars-api
+
+useDotenv: true
+
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  environment:
+    SWAPI_URL: ${env:SWAPI_URL}
+    DATABASE_URL: ${env:DATABASE_URL}
+  # stage: production
+  # region: us-east-1
+  # memorySize: 2048
+  apiGateway:
+    name: starwars-api-gateway 
+    version: v2
+    cors:
+      origins:
+        - '*'
+      methods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+        - HEAD
+      headers:
+        - Content-Type
+        - Authorization
+      allowCredentials: false
+
+functions:
+  main:
+    handler: dist/serverless.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: '{proxy+}'
+          method: ANY
+
+plugins:
+  - serverless-jetpack
+  - serverless-offline

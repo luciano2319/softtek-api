@@ -1,0 +1,195 @@
+{
+  "D:\\otros\\Softekk_Prueba_Tecnica\\starwars-api": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.6",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "env": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "starwars-api",
+            "useDotenv": true,
+            "frameworkVersion": "4",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs18.x",
+              "environment": {
+                "SWAPI_URL": "https://swapi.py4e.com/api",
+                "DATABASE_URL": "mysql://admin:zNvem55R6rGVHLZ@evaluacion-softtek.c9qmai44axdb.us-east-1.rds.amazonaws.com:3306/starwars?schema=public"
+              },
+              "apiGateway": {
+                "name": "starwars-api-gateway",
+                "version": "v2",
+                "cors": {
+                  "origins": [
+                    "*"
+                  ],
+                  "methods": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "HEAD"
+                  ],
+                  "headers": [
+                    "Content-Type",
+                    "Authorization"
+                  ],
+                  "allowCredentials": "<REDACTED>"
+                }
+              },
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true
+            },
+            "functions": {
+              "main": {
+                "handler": "dist/serverless.handler",
+                "events": [
+                  {
+                    "http": {
+                      "path": "/",
+                      "method": "ANY"
+                    }
+                  },
+                  {
+                    "http": {
+                      "path": "{proxy+}",
+                      "method": "ANY"
+                    }
+                  }
+                ]
+              }
+            },
+            "plugins": [
+              "serverless-jetpack",
+              "serverless-offline"
+            ]
+          },
+          "configFileDirPath": "D:\\otros\\Softekk_Prueba_Tecnica\\starwars-api",
+          "config": {
+            "type": "env"
+          },
+          "options": {},
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:env",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "D:\\otros\\Softekk_Prueba_Tecnica\\starwars-api",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "starwars-api",
+      "useDotenv": true,
+      "frameworkVersion": "4",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "environment": {
+          "SWAPI_URL": "https://swapi.py4e.com/api",
+          "DATABASE_URL": "mysql://admin:zNvem55R6rGVHLZ@evaluacion-softtek.c9qmai44axdb.us-east-1.rds.amazonaws.com:3306/starwars?schema=public"
+        },
+        "apiGateway": {
+          "name": "starwars-api-gateway",
+          "version": "v2",
+          "cors": {
+            "origins": [
+              "*"
+            ],
+            "methods": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE",
+              "HEAD"
+            ],
+            "headers": [
+              "Content-Type",
+              "Authorization"
+            ],
+            "allowCredentials": "<REDACTED>"
+          }
+        },
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "functions": {
+        "main": {
+          "handler": "dist/serverless.handler",
+          "events": [
+            {
+              "http": {
+                "path": "/",
+                "method": "ANY"
+              }
+            },
+            {
+              "http": {
+                "path": "{proxy+}",
+                "method": "ANY"
+              }
+            }
+          ]
+        }
+      },
+      "plugins": [
+        "serverless-jetpack",
+        "serverless-offline"
+      ]
+    },
+    "serviceRawFile": "service: starwars-api\r\n\r\nuseDotenv: true\r\n\r\nframeworkVersion: '4'\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  environment:\r\n    SWAPI_URL: ${env:SWAPI_URL}\r\n    DATABASE_URL: ${env:DATABASE_URL}\r\n  # stage: production\r\n  # region: us-east-1\r\n  # memorySize: 2048\r\n  apiGateway:\r\n    name: starwars-api-gateway \r\n    version: v2\r\n    cors:\r\n      origins:\r\n        - '*'\r\n      methods:\r\n        - GET\r\n        - POST\r\n        - PUT\r\n        - DELETE\r\n        - HEAD\r\n      headers:\r\n        - Content-Type\r\n        - Authorization\r\n      allowCredentials: false\r\n\r\nfunctions:\r\n  main:\r\n    handler: dist/serverless.handler\r\n    events:\r\n      - http:\r\n          path: /\r\n          method: ANY\r\n      - http:\r\n          path: '{proxy+}'\r\n          method: ANY\r\n\r\nplugins:\r\n  - serverless-jetpack\r\n  - serverless-offline\r\n",
+    "command": [
+      "offline"
+    ],
+    "options": {},
+    "error": {
+      "message": "Serverless plugin \"serverless-jetpack\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.",
+      "stack": "ServerlessError2: Serverless plugin \"serverless-jetpack\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.\n    at PluginManager.resolveServicePlugins (file:///C:/Users/LUCIANO/.serverless/releases/4.4.6/package/dist/sf-core.js:953:2671)\n    at async PluginManager.loadAllPlugins (file:///C:/Users/LUCIANO/.serverless/releases/4.4.6/package/dist/sf-core.js:953:1293)\n    at async Serverless.init (file:///C:/Users/LUCIANO/.serverless/releases/4.4.6/package/dist/sf-core.js:960:9930)\n    at async runFramework (file:///C:/Users/LUCIANO/.serverless/releases/4.4.6/package/dist/sf-core.js:983:1262)\n    at async route (file:///C:/Users/LUCIANO/.serverless/releases/4.4.6/package/dist/sf-core.js:1011:13954)\n    at async Object.run2 [as run] (file:///C:/Users/LUCIANO/.serverless/releases/4.4.6/package/dist/sf-core.js:1011:14355)\n    at async run3 (file:///C:/Users/LUCIANO/.serverless/releases/4.4.6/package/dist/sf-core.js:1011:15617)",
+      "code": "PLUGIN_NOT_FOUND"
+    },
+    "params": {},
+    "machineId": "7fd0b47a260727900e9a5f59d157da13",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "5d8b660e-6199-42aa-aa70-f3781f2d4faa",
+    "orgName": "lucianodev",
+    "userId": "4VS37R7mtQtpc24Ldk",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "lucianodev",
+    "subscription": null,
+    "userEmail": "lfcc_1369@hotmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "019728833766",
+    "projectType": "traditional",
+    "versionSf": "4.4.6",
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
