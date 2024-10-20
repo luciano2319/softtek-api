@@ -169,7 +169,7 @@
                     "Properties": {
                       "Code": {
                         "S3Bucket": "serverless-framework-deployments-us-east-1-4b88c842-fa16",
-                        "S3Key": "serverless/starwars-api/dev/1729392117034-2024-10-20T02:41:57.034Z/starwars-api.zip"
+                        "S3Key": "serverless/starwars-api/dev/1729397456683-2024-10-20T04:10:56.683Z/starwars-api.zip"
                       },
                       "Handler": "dist/serverless.handler",
                       "Runtime": "nodejs18.x",
@@ -206,14 +206,14 @@
                       "MainLogGroup"
                     ]
                   },
-                  "MainLambdaVersionJN9VYt7O51RalbxtdN2xJ0IjmluiYjWXKJKBMHQ35A": {
+                  "MainLambdaVersion4iwCS4yCGi33Jt1uXtx5FNlMR2G2daWTj8EBokkwSJU": {
                     "Type": "AWS::Lambda::Version",
                     "DeletionPolicy": "Retain",
                     "Properties": {
                       "FunctionName": {
                         "Ref": "MainLambdaFunction"
                       },
-                      "CodeSha256": "XAYT6yxdwd6blJzOmnu1a6KfK3raEMxVqfWT7JbzBpE="
+                      "CodeSha256": "ZahaVsrgTdE5ghAaavKtyBPalaBvV3M2hVxVqQuyYWk="
                     }
                   },
                   "ApiGatewayRestApi": {
@@ -338,7 +338,7 @@
                       "MainLambdaPermissionApiGateway"
                     ]
                   },
-                  "ApiGatewayDeployment1729392072844": {
+                  "ApiGatewayDeployment1729397426914": {
                     "Type": "AWS::ApiGateway::Deployment",
                     "Properties": {
                       "RestApiId": {
@@ -399,7 +399,7 @@
                   "MainLambdaFunctionQualifiedArn": {
                     "Description": "Current Lambda function version",
                     "Value": {
-                      "Ref": "MainLambdaVersionJN9VYt7O51RalbxtdN2xJ0IjmluiYjWXKJKBMHQ35A"
+                      "Ref": "MainLambdaVersion4iwCS4yCGi33Jt1uXtx5FNlMR2G2daWTj8EBokkwSJU"
                     },
                     "Export": {
                       "Name": "sls-starwars-api-dev-MainLambdaFunctionQualifiedArn"
@@ -471,7 +471,7 @@
                 "memory": 1024,
                 "timeout": 6,
                 "runtime": "nodejs18.x",
-                "versionLogicalId": "MainLambdaVersionJN9VYt7O51RalbxtdN2xJ0IjmluiYjWXKJKBMHQ35A"
+                "versionLogicalId": "MainLambdaVersion4iwCS4yCGi33Jt1uXtx5FNlMR2G2daWTj8EBokkwSJU"
               }
             },
             "package": {
@@ -487,7 +487,7 @@
               "artifactsS3KeyDirname": "serverless/starwars-api/dev/code-artifacts",
               "deploymentBucket": "serverless-framework-deployments-us-east-1-4b88c842-fa16",
               "artifact": ".serverless\\starwars-api.zip",
-              "artifactDirectoryName": "serverless/starwars-api/dev/1729392117034-2024-10-20T02:41:57.034Z"
+              "artifactDirectoryName": "serverless/starwars-api/dev/1729397456683-2024-10-20T04:10:56.683Z"
             }
           },
           "configFileDirPath": "D:\\otros\\Softekk_Prueba_Tecnica\\starwars-api",
@@ -669,7 +669,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-us-east-1-4b88c842-fa16",
-                  "S3Key": "serverless/starwars-api/dev/1729392117034-2024-10-20T02:41:57.034Z/starwars-api.zip"
+                  "S3Key": "serverless/starwars-api/dev/1729397456683-2024-10-20T04:10:56.683Z/starwars-api.zip"
                 },
                 "Handler": "dist/serverless.handler",
                 "Runtime": "nodejs18.x",
@@ -706,14 +706,14 @@
                 "MainLogGroup"
               ]
             },
-            "MainLambdaVersionJN9VYt7O51RalbxtdN2xJ0IjmluiYjWXKJKBMHQ35A": {
+            "MainLambdaVersion4iwCS4yCGi33Jt1uXtx5FNlMR2G2daWTj8EBokkwSJU": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "MainLambdaFunction"
                 },
-                "CodeSha256": "XAYT6yxdwd6blJzOmnu1a6KfK3raEMxVqfWT7JbzBpE="
+                "CodeSha256": "ZahaVsrgTdE5ghAaavKtyBPalaBvV3M2hVxVqQuyYWk="
               }
             },
             "ApiGatewayRestApi": {
@@ -838,7 +838,7 @@
                 "MainLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1729392072844": {
+            "ApiGatewayDeployment1729397426914": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -899,7 +899,7 @@
             "MainLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "MainLambdaVersionJN9VYt7O51RalbxtdN2xJ0IjmluiYjWXKJKBMHQ35A"
+                "Ref": "MainLambdaVersion4iwCS4yCGi33Jt1uXtx5FNlMR2G2daWTj8EBokkwSJU"
               },
               "Export": {
                 "Name": "sls-starwars-api-dev-MainLambdaFunctionQualifiedArn"
@@ -971,7 +971,7 @@
           "memory": 1024,
           "timeout": 6,
           "runtime": "nodejs18.x",
-          "versionLogicalId": "MainLambdaVersionJN9VYt7O51RalbxtdN2xJ0IjmluiYjWXKJKBMHQ35A"
+          "versionLogicalId": "MainLambdaVersion4iwCS4yCGi33Jt1uXtx5FNlMR2G2daWTj8EBokkwSJU"
         }
       },
       "package": {
@@ -987,7 +987,7 @@
         "artifactsS3KeyDirname": "serverless/starwars-api/dev/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-east-1-4b88c842-fa16",
         "artifact": ".serverless\\starwars-api.zip",
-        "artifactDirectoryName": "serverless/starwars-api/dev/1729392117034-2024-10-20T02:41:57.034Z"
+        "artifactDirectoryName": "serverless/starwars-api/dev/1729397456683-2024-10-20T04:10:56.683Z"
       }
     },
     "serviceRawFile": "service: starwars-api\r\n\r\nplugins:\r\n  - serverless-jetpack\r\n  - serverless-offline\r\n\r\nuseDotenv: true\r\n\r\nframeworkVersion: '4'\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  environment:\r\n    SWAPI_URL: ${env:SWAPI_URL}\r\n    DATABASE_URL: ${env:DATABASE_URL}\r\n  # stage: production\r\n  # region: us-east-1\r\n  # memorySize: 2048\r\n  vpc:\r\n    subnetIds:\r\n      - subnet-0bf79a58960460c7e\r\n      - subnet-055feaddca913028c\r\n      - subnet-0e17a2d20a160af93\r\n      - subnet-0dddebcd6bb360117\r\n      - subnet-0ffdbdde1b7f4cbec\r\n      - subnet-0b9b7771bef7496d9\r\n    securityGroupIds:\r\n      - sg-0565b976b97262683\r\n  apiGateway:\r\n    name: starwars-api-gateway \r\n    version: v2\r\n    cors:\r\n      origins:\r\n        - '*'\r\n      methods:\r\n        - GET\r\n        - POST\r\n        - PUT\r\n        - DELETE\r\n        - HEAD\r\n      headers:\r\n        - Content-Type\r\n        - Authorization\r\n      allowCredentials: false\r\n\r\nfunctions:\r\n  main:\r\n    handler: dist/serverless.handler\r\n    events:\r\n      - http:\r\n          path: /\r\n          method: ANY\r\n      - http:\r\n          path: '{proxy+}'\r\n          method: ANY\r\n    vpc:\r\n      subnetIds:\r\n        - subnet-0bf79a58960460c7e\r\n        - subnet-055feaddca913028c\r\n        - subnet-0e17a2d20a160af93\r\n        - subnet-0dddebcd6bb360117\r\n        - subnet-0ffdbdde1b7f4cbec\r\n        - subnet-0b9b7771bef7496d9\r\n      securityGroupIds:\r\n        - sg-0565b976b97262683\r\n\r\npackage:\r\n  include:\r\n    - '!node_modules/.prisma/client/**'\r\n    - 'node_modules/.prisma/client/**'\r\n    - '!node_modules/.prisma/client/libquery_engine-*'\r\n    - 'node_modules/.prisma/client/libquery_engine-rhel-*'\r\n    - '!node_modules/prisma/libquery_engine-*'\r\n    - '!node_modules/@prisma/engines/**'\r\n    - '!node_modules/.cache/prisma/**'  ",
@@ -1026,12 +1026,12 @@
     "serviceUniqueId": "arn:aws:cloudformation:us-east-1:019728833766:stack/starwars-api-dev/d21a9fa0-8e76-11ef-8c64-0affe2c1d5ef",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:019728833766:stack/starwars-api-dev/d21a9fa0-8e76-11ef-8c64-0affe2c1d5ef",
     "serviceProviderAwsCfStackCreated": "2024-10-20T00:04:05.514Z",
-    "serviceProviderAwsCfStackUpdated": "2024-10-20T02:42:07.788Z",
+    "serviceProviderAwsCfStackUpdated": "2024-10-20T04:11:07.763Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "MainLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:us-east-1:019728833766:function:starwars-api-dev-main:9",
+        "OutputValue": "arn:aws:lambda:us-east-1:019728833766:function:starwars-api-dev-main:10",
         "Description": "Current Lambda function version",
         "ExportName": "sls-starwars-api-dev-MainLambdaFunctionQualifiedArn"
       },

@@ -46,7 +46,7 @@ npm run test:watch
 > La semilla eliminará todos los registros de personajes y cargará 10 planetas cuyo códigos empiezan en 1 y termina en 10, lo cuál nos servirá para la inserción de personas
 
 # Ejecutar en producción
-1. Instalar dependencias, ejecutar la migración y generació del cliente de *Prisma* y levantar el proyecto.
+1. Instalar dependencias, ejecutar la migración y generación del cliente de *Prisma* y levantar el proyecto.
 2. Tener instalado y configurado __aws cli__
 3. Tener instalado y configurado el cliente de __serverless__
 4. Ejecutar el build de producción
@@ -57,8 +57,8 @@ npm run build
 ```
 serverless offline
 ```
-5.1. Comentar la configuración de la VPC en el archivo __serverles.yml__, en la sección de *provider* y *functions*
-6. Realizar el despliegue en AWS con el comando
+6. Comentar la configuración de la VPC en el archivo __serverles.yml__, en la sección de *provider* y *functions*
+7. Realizar el despliegue en AWS con el comando
 ```
 serverless deploy
 ```
