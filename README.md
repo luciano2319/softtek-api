@@ -52,7 +52,7 @@ npm run build
 ```
 serverless offline
 ```
-5.1. Comentar la configuración de la VPC en el archivo __serverles.yml__
+5.1. Comentar la configuración de la VPC en el archivo __serverles.yml__, en la sección de *provider* y *functions*
 6. Realizar el despliegue en AWS con el comando
 ```
 serverless deploy

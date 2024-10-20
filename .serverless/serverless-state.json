@@ -155,7 +155,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-4b88c842-fa16",
-                "S3Key": "serverless/starwars-api/dev/1729389127459-2024-10-20T01:52:07.459Z/starwars-api.zip"
+                "S3Key": "serverless/starwars-api/dev/1729392117034-2024-10-20T02:41:57.034Z/starwars-api.zip"
               },
               "Handler": "dist/serverless.handler",
               "Runtime": "nodejs18.x",
@@ -192,14 +192,14 @@
               "MainLogGroup"
             ]
           },
-          "MainLambdaVersion5NNZ5akh00CMyrCCTqWh3fsBIltcwBfyVgr2QKffk": {
+          "MainLambdaVersionJN9VYt7O51RalbxtdN2xJ0IjmluiYjWXKJKBMHQ35A": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "MainLambdaFunction"
               },
-              "CodeSha256": "qRbSlCBV8HAakXSem4jfLrWCoaN1gpgOkE8DB3/Du44="
+              "CodeSha256": "XAYT6yxdwd6blJzOmnu1a6KfK3raEMxVqfWT7JbzBpE="
             }
           },
           "ApiGatewayRestApi": {
@@ -324,7 +324,7 @@
               "MainLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1729389083254": {
+          "ApiGatewayDeployment1729392072844": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -385,7 +385,7 @@
           "MainLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "MainLambdaVersion5NNZ5akh00CMyrCCTqWh3fsBIltcwBfyVgr2QKffk"
+              "Ref": "MainLambdaVersionJN9VYt7O51RalbxtdN2xJ0IjmluiYjWXKJKBMHQ35A"
             },
             "Export": {
               "Name": "sls-starwars-api-dev-MainLambdaFunctionQualifiedArn"
@@ -457,7 +457,7 @@
         "memory": 1024,
         "timeout": 6,
         "runtime": "nodejs18.x",
-        "versionLogicalId": "MainLambdaVersion5NNZ5akh00CMyrCCTqWh3fsBIltcwBfyVgr2QKffk"
+        "versionLogicalId": "MainLambdaVersionJN9VYt7O51RalbxtdN2xJ0IjmluiYjWXKJKBMHQ35A"
       }
     },
     "configValidationMode": "warn",
@@ -488,7 +488,7 @@
         "artifactsS3KeyDirname": "serverless/starwars-api/dev/code-artifacts",
         "deploymentBucket": "serverless-framework-deployments-us-east-1-4b88c842-fa16",
         "artifact": ".serverless\\starwars-api.zip",
-        "artifactDirectoryName": "serverless/starwars-api/dev/1729389127459-2024-10-20T01:52:07.459Z"
+        "artifactDirectoryName": "serverless/starwars-api/dev/1729392117034-2024-10-20T02:41:57.034Z"
       }
     },
     "appId": null,
@@ -496,7 +496,7 @@
     "layers": {}
   },
   "package": {
-    "artifactDirectoryName": "serverless/starwars-api/dev/1729389127459-2024-10-20T01:52:07.459Z",
+    "artifactDirectoryName": "serverless/starwars-api/dev/1729392117034-2024-10-20T02:41:57.034Z",
     "artifact": "starwars-api.zip"
   }
 }

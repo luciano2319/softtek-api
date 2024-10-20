@@ -13,6 +13,7 @@ async function setupSwagger(app: INestApplication) {
   const config = new DocumentBuilder()
     .setTitle('Starwars - People API')
     .setDescription('SOFTTEK - Reto Técnico')
+    .addServer('/dev')
     .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, documentFactory);
@@ -26,7 +27,6 @@ async function bootstrap(): Promise<Handler> {
       forbidNonWhitelisted: true,
     })
   );
-
   setupSwagger(app);
   await app.init();
 
