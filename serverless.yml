@@ -1,5 +1,9 @@
 service: starwars-api
 
+plugins:
+  - serverless-jetpack
+  - serverless-offline
+
 useDotenv: true
 
 frameworkVersion: '4'
@@ -13,6 +17,16 @@ provider:
   # stage: production
   # region: us-east-1
   # memorySize: 2048
+  vpc:
+    subnetIds:
+      - subnet-0bf79a58960460c7e
+      - subnet-055feaddca913028c
+      - subnet-0e17a2d20a160af93
+      - subnet-0dddebcd6bb360117
+      - subnet-0ffdbdde1b7f4cbec
+      - subnet-0b9b7771bef7496d9
+    securityGroupIds:
+      - sg-0565b976b97262683
   apiGateway:
     name: starwars-api-gateway 
     version: v2
@@ -40,7 +54,23 @@ functions:
       - http:
           path: '{proxy+}'
           method: ANY
+    vpc:
+      subnetIds:
+        - subnet-0bf79a58960460c7e
+        - subnet-055feaddca913028c
+        - subnet-0e17a2d20a160af93
+        - subnet-0dddebcd6bb360117
+        - subnet-0ffdbdde1b7f4cbec
+        - subnet-0b9b7771bef7496d9
+      securityGroupIds:
+        - sg-0565b976b97262683
 
-plugins:
-  - serverless-jetpack
-  - serverless-offline
+package:
+  include:
+    - '!node_modules/.prisma/client/**'
+    - 'node_modules/.prisma/client/**'
+    - '!node_modules/.prisma/client/libquery_engine-*'
+    - 'node_modules/.prisma/client/libquery_engine-rhel-*'
+    - '!node_modules/prisma/libquery_engine-*'
+    - '!node_modules/@prisma/engines/**'
+    - '!node_modules/.cache/prisma/**'  

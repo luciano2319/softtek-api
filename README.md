@@ -41,3 +41,19 @@ http://localhost:3000/api/seed
 > La semilla eliminará todos los registros de personajes y cargará 10 planetas cuyo códigos empiezan en 1 y termina en 10, lo cuál nos servirá para la inserción de personas
 
 # Ejecutar en producción
+1. Instalar dependencias, ejecutar la migración y generació del cliente de *Prisma* y levantar el proyecto.
+2. Tener instalado y configurado __aws cli__
+3. Tener instalado y configurado el cliente de __serverless__
+4. Ejecutar el build de producción
+```
+npm run build
+```
+5. Probar localmente ejecutando el comando
+```
+serverless offline
+```
+5.1. Comentar la configuración de la VPC en el archivo __serverles.yml__
+6. Realizar el despliegue en AWS con el comando
+```
+serverless deploy
+```
